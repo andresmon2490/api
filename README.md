@@ -1,15 +1,72 @@
-# Hono API - Learning Path: Backend & Infra
+# 🚀 Hono Multi-Runtime API
 
-El objetivo de este proyecto es profundizar en el desarrollo backend y la gestión de infraestructura moderna. La elección de Hono.js se fundamenta en su compatibilidad nativa con diversos entornos de ejecución de JavaScript (lenguaje que ya conozco), permitiendo un despliegue versátil que abarca desde arquitecturas tradicionales conmo VPS, hasta soluciones de Edge Functions, servicios Serverless y contenedores. Esta portabilidad + el uso de arquitectura hexagonal asegura que la lógica de negocio permanezca desacoplada de la infraestructura de hosting, facilitando la escalabilidad y la migración entre proveedores de nube sin alteraciones en el código fuente."
+Una API moderna, ultraligera y de alto rendimiento construida con **Hono.js**, diseñada para ejecutarse en cualquier runtime de JavaScript (Node.js, Bun, Cloudflare Workers, Deno) bajo una **Arquitectura Hexagonal**.
 
-## 🎯 Objetivos del Proyecto
-* **Dominio de Web Standards en el Backend:** Implementar una API basada estrictamente en estándares de la Web (Fetch API), eliminando la dependencia histórica de librerías vinculadas exclusivamente a Node.js.
-* **Abstracción de Infraestructura:** Validar el despliegue de una misma base de código en múltiples arquitecturas (Serverless, Containers y Edge) sin realizar refactorizaciones.
-* **Optimización de Latencia:** Comprender y aplicar el concepto de *Edge Computing* para ejecutar lógica de negocio lo más cerca posible del usuario final.
+[![Hono](https://img.shields.io/badge/Framework-Hono.js-orange?style=flat-square&logo=hono)](https://hono.dev/)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-## 🗺️ Roadmap de Metas
-- [ ] **Fase 0:** Investigación y planeación.
-- [ ] **Fase 1:** Configuración del entorno Hono y manejo de rutas básicas.
-- [ ] **Fase 2:** Implementación de Middleware (Logger, Auth, CORS).
-- [ ] **Fase 3:** Integración con persistencia de datos (Database Layer).
-- [ ] **Fase 4:** CI/CD y despliegue a entorno de producción en el Edge.
+---
+
+## 📖 Descripción
+
+Este proyecto es una implementación de referencia para construir servicios backend que priorizan los **Web Standards**. Gracias a la abstracción de Hono, el mismo código fuente puede ser desplegado sin cambios en infraestructuras distribuidas (Edge), contenedores (Docker) o servidores tradicionales (VPS).
+
+El desarrollo sigue los principios de la **Arquitectura Hexagonal (Puertos y Adaptadores)**, asegurando que la lógica de negocio permanezca desacoplada de los detalles técnicos de la infraestructura.
+
+## ✨ Características Principales
+
+*   **Zero Dependencies (Core):** Basado en estándares de la Web (Fetch API).
+*   **Multi-Runtime:** Soporte nativo para Node.js, Bun, Deno y Edge Functions.
+*   **Hexagonal Architecture:** Lógica de negocio aislada y testeable.
+*   **Type Safety:** Tipado estricto con TypeScript.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Hono.js](https://hono.dev/)
+- **Runtime:** Node.js / Bun
+
+
+## 🏗️ Estructura del Proyecto
+
+```text
+app/
+├── domain/         # Lógica de negocio pura (Entidades, Casos de Uso)
+├── application/    # Puertos (Interfaces) y servicios de aplicación
+└── infrastructure/ # Adaptadores (DB, External APIs, Framework)
+```
+
+## 🚀 Inicio Rápido
+
+### Requisitos Previos
+
+- Node.js (v20+) o Bun
+- Docker (opcional para desarrollo local)
+
+### Instalación
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/andresmon2490/api.git
+
+# Instalar dependencias
+npm install
+```
+
+### Desarrollo
+
+```bash
+# Iniciar servidor de desarrollo
+npm run dev
+```
+
+## 🗺️ Hoja de Ruta
+
+El plan de desarrollo detallado se encuentra en el directorio de planeación:
+
+- [Estrategia Técnica y Roadmap](plan-de-desarrollo/estrategia.md)
+- [Seguimiento de Metas](plan-de-desarrollo/README.md)
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
